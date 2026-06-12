@@ -1,0 +1,132 @@
+html {
+	font-family: Calibri, "Helvetica Neue", sans-serif;
+	font-weight: 300;
+}
+
+html, body, aside, main {
+	margin: 0;
+	padding: 0;
+}
+
+aside {
+	padding-top: 0.5in;
+	padding-left: 0.25in;
+	padding-right: 1em;
+	width: 13em;
+	height: 33in;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: #072446;
+	color: #f0fff4;
+	overflow: scroll;
+	scrollbar-width: none;
+}
+aside::-webkit-scrollbar {
+	display: none;
+}
+
+main {
+	margin: 0.5in;
+	margin-left: 19em;
+	max-width: 38em;
+}
+
+main p {
+	line-height: 1.40;
+}
+
+main ul {
+	line-height: 1.25;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+main li {
+	list-style-type: "-";
+	margin-left: 0.35em;
+	padding-left: 1.0em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 0;
+	font-family: "Corbel", "Helvetica Neue", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+h2 + p {
+	margin-top: 0.4em;
+}
+
+h1, h2 {
+	font-weight: 250;
+}
+
+h1 + h2 {
+	margin-top: 0.25em;
+}
+
+h1 + p:first-of-type ,
+h3 + h4 ,
+h4 + h5 ,
+h5 + h6 {
+	margin-top: 0.2em;
+}
+h2 + h3 {
+	margin-top: 0.4em;
+}
+
+h5 {
+	color: #777777;
+	margin-bottom: 0;
+}
+
+h5 + p, h5 + ul, p + ul {
+	margin-top: 0.3em;
+}
+
+p.verbose + ul {
+	margin-top: 0.25em;
+}
+
+h5 + h4 {
+	margin-top: 0.35em;
+}
+
+.sub {
+	color: #777777;
+}
+
+aside h2:first-of-type
+, main h1:first-of-type 
+{
+	margin-top: 0;
+}
+
+aside a {
+	color: #e0e9ff;
+}
+
+aside ul {
+	padding: 0;
+	margin-left: 0;
+}
+
+aside li {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+aside li + li {
+	margin-top: 0.4em;
+}
+
+.verbose {
+	display: none;
+}
+
+.concise {
+	display: none;
+}

@@ -1,0 +1,28 @@
+@page {
+	margin: 0;
+}
+
+html, body, main {
+	font-size: 11pt;
+	font-weight: 300;
+}
+
+aside {
+	padding-top: 0.3in;
+}
+
+main {
+	margin-top: 0.3in;
+	padding-bottom: 0.3in;
+}
+
+h1 {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.pbreak {
+	break-before: page;
+	padding-top: 0.3in;
+	margin-top: 0;
+}
