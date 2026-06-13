@@ -1,8 +1,8 @@
 # jamrolls / resume
 
-An online personal resume that can be rendered to PDF as needed.
+An adaptable, online personal resume that can be tailored to individual applications and rendered to PDF as needed.
 
-version 0.1.0
+version 0.2.0
 
 ## Table of Contents
 
@@ -13,13 +13,19 @@ version 0.1.0
 
 ## Install
 
-Clone the repository to a web server, then adapt index.html as needed to include your own work summary and experience.
+1. Clone the repository to a web server
+2. Rename example-resume.json to resume.json
+3. Edit as desired to match your actual name/experience/title/etc.
 
 ## Usage
 
-Access the resume via the URL associated with the installed path. To render it to a PDF document, simply print using your desired print to PDF driver.
+Access your resume via the URL associated with the installed path, e.g. https://example.com/resume if you cloned into the root folder of a file-based web server.
 
-Caution: while printing to paper is also feasible, the page margins required by most personal printers may not handle the edge-to-edge design.
+By default, the resume will render using `resume.json` for your personal data. Optionally, you can include a query string indicating a desired alternate .json file (this is the adaptable part), e.g. https://example.com/resume?manager for `manager.json` rather than `resume.json`.
+
+To render the displayed resume to a PDF document, simply print using your desired print to PDF driver. Note that at this time, Chrome seems to do the best job of rendering to PDF.
+
+Caution: while printing to paper is also feasible, the minimum page margins required by most personal printers may not handle the intended edge-to-edge design well.
 
 ## Contributing
 

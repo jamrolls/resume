@@ -1,0 +1,84 @@
+{
+  "name": "Applicant",
+  "title": "Title",
+  "location": "City, State, United States",
+
+  "summary": [
+    "A summary of yourself and your objective.",
+    "Multiple paragraphs are allowed."
+  ],
+
+  "experience": [
+    {
+      "company": "Company",
+      "title": "Title",
+      "start": "January 2000",
+      "end": null,
+      "duration": "Optional, but something like '10 years 6 months'",
+      "pageBreak": false,
+      "description": "Optional description of the company or your role in it",
+      "bullets": [
+        "Accomplishment",
+        "Accomplishment",
+        "Accomplishment"
+      ]
+    },
+    {
+      "company": "Company",
+      "title": "Title",
+      "start": "January 2000",
+      "end": null,
+      "duration": "Optional, but something like '10 years 6 months'",
+      "pageBreak": false,
+      "description": "Optional description of the company or your role in it",
+      "bullets": [
+        "Accomplishment",
+        "Accomplishment",
+        "Accomplishment"
+      ]
+    }
+  ],
+
+  "education": [
+    {
+      "institution": "University of Boilerplate",
+      "credential": "Bachelor of Science – Lorem Ipsum Studies",
+      "date": "December 1999"
+    },
+    {
+      "institution": "University 2",
+      "credential": "Degree 2",
+      "date": "Date 2"
+    }
+  ],
+
+  "contact": {
+    "email": "applicant@example.com",
+    "linkedin": {
+      "display": "linkedin.com/in/applicant",
+      "url": "https://www.linkedin.com/in/applicant"
+    },
+    "phone": {
+      "display": "(555) 867-5309",
+      "url": "tel:+5558675309"
+    },
+    "resume": {
+      "display": "jiv.us/apps/resume",
+      "url": "https://www.jiv.us/apps/resume"
+    }
+  },
+
+  "skills": {
+    "top": [
+      "Skill",
+      "Skill",
+      "Skill"
+    ],
+    "technical": [
+      "Skill",
+      "Skill",
+      "Skill"
+    ]
+  }
+}
+
