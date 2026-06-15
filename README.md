@@ -1,7 +1,11 @@
 # jamrolls / resume
 
-An adaptable, online personal resume that can be tailored to individual 
-applications and rendered to PDF as needed.
+An adaptable framework for tailored personal resume production.
+
+This tool reduces the work of the common practice of tailoring resumes 
+to each opportunity by treating resume contents as data, independent of 
+the rendering framework for that data, while providing a rendering 
+framework which is well suited to both PDF exports and online review.
 
 Separately, a personal experiment testing the practical capabilities and 
 limits of AI tools when applied throughout the entire application 
@@ -23,6 +27,7 @@ version 0.2.0
 1. Clone the repository to a web server
 2. Rename example-resume.json to resume.json
 3. Edit as desired to match your actual name/experience/title/etc.
+4. Optionally, add additional .json files for tailored alternate resumes
 
 ## Usage
 
