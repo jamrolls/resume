@@ -5,8 +5,9 @@
 	// verbose.json for ?verbose.
 	// As a security measure, accept only alphanumeric characters such that
 	// any fetched file must be a .json file in the same directory.
-	const name = window.location.search.replace(/[^a-zA-Z\-]/g, '');
-	const src = name ? name + '.json': 'resume.json';
+	const safe = window.location.search.replace(/[^a-zA-Z\-]/g, '');
+	const name = safe ? safe : 'resume';
+	const src = 'data/' + name + '.json';
 
 	fetch(src)
 		.then(r => {
