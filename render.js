@@ -1,12 +1,13 @@
 (() => {
 
 	// Determine which JSON file to load. Default to resume.json or use an 
-	// arbitrary alternate if specified in the query string, e.g. 
-	// verbose.json for ?verbose.
-	// As a security measure, accept only alphanumeric characters such that
-	// any fetched file must be a .json file in the same directory.
-	const safe = window.location.search.replace(/[^a-zA-Z\-]/g, '');
-	const name = safe ? safe : 'resume';
+	// arbitrary alternate if specified in the query string, e.g. verbose.json 
+	// for ?verbose or ?verbose2. As a security measure, accept only 
+	// alphanumeric characters such that any fetched file must be a .json file 
+	// in the same directory. Numerals are allowed but may not be the initial 
+	// character of the filename.
+	const match = window.location.search.match(/^\?([a-zA-Z][a-zA-Z0-9\-]*)/);
+	const name = match ? match[1] : 'resume';
 	const src = 'data/' + name + '.json';
 
 	fetch(src)
