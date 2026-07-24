@@ -21,6 +21,17 @@ h1 {
 	padding-top: 0;
 }
 
+/* Named page-break classes. Set padding-top per class to
+ * match your printed output. */
+.break1,
+.break2,
+.break3 {
+	break-before: page;
+	padding-top: 0.3in;
+	margin-top: 0;
+}
+
+/* Deprecated: use a named break class instead. */
 .pbreak {
 	break-before: page;
 	padding-top: 0.3in;

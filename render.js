@@ -111,7 +111,15 @@
 
 		const h3 = document.createElement('h3');
 		h3.textContent = job.company;
-		if (job.pageBreak) h3.className = 'pbreak';
+		if (job['class']) h3.className = job['class'];
+		// pageBreak is deprecated; use class instead
+		else if (job.pageBreak) {
+			console.warn(
+				`${job.company}: pageBreak is deprecated, ` +
+				`use class instead`
+			);
+			h3.className = 'pbreak';
+		}
 		frag.appendChild(h3);
 
 		const h4 = document.createElement('h4');
@@ -137,11 +145,13 @@
 
 		if (job.bullets?.length) {
 			const ul = document.createElement('ul');
-			for (const text of job.bullets) {
+			job.bullets.forEach((text, i) => {
 				const li = document.createElement('li');
 				li.textContent = text;
+				if (job.bulletClasses?.[i])
+					li.className = job.bulletClasses[i];
 				ul.appendChild(li);
-			}
+			});
 			frag.appendChild(ul);
 		}
 
@@ -176,12 +186,15 @@
 			if (entry.institution) {
 				const h3 = document.createElement('h3');
 				h3.textContent = entry.institution;
+				if (entry['class']) h3.className = entry['class'];
 				frag.appendChild(h3);
 			}
 
 			const h4 = document.createElement('h4');
 			h4.textContent = entry.credential
 				+ (entry.date ? ` · (${entry.date})` : '');
+			if (!entry.institution && entry['class'])
+				h4.className = entry['class'];
 			frag.appendChild(h4);
 		}
 

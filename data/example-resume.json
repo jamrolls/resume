@@ -15,7 +15,6 @@
       "start": "January 2000",
       "end": null,
       "duration": "Optional, but something like '10 years 6 months'",
-      "pageBreak": false,
       "description": "Optional description of the company or your role in it",
       "bullets": [
         "Accomplishment",
@@ -24,17 +23,22 @@
       ]
     },
     {
-      "company": "Company",
+      "company": "Company (starts on a new page)",
       "title": "Title",
       "start": "January 2000",
       "end": null,
       "duration": "Optional, but something like '10 years 6 months'",
-      "pageBreak": false,
+      "class": "break1",
       "description": "Optional description of the company or your role in it",
       "bullets": [
         "Accomplishment",
-        "Accomplishment",
+        "Accomplishment (this bullet starts on a new page)",
         "Accomplishment"
+      ],
+      "bulletClasses": [
+        null,
+        "break2",
+        null
       ]
     }
   ],
