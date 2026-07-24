@@ -4,7 +4,8 @@ import { extname } from 'node:path';
 
 const server = createServer(async(req, res) => {
 	if(req.method === 'GET') {
-		const path = req.url.substring(1);
+		const { pathname } = new URL(req.url, 'http://localhost');
+		const path = decodeURIComponent(pathname).substring(1) || 'index.html';
 		try {
 			console.log('GET ' + path);
 			await access(path, constants.R_OK);
