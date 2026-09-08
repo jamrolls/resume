@@ -25,6 +25,12 @@ aside {
 aside::-webkit-scrollbar {
 	display: none;
 }
+aside p {
+	font-size: 90%;
+}
+aside h2 + p {
+	margin-top: 1.2em;
+}
 
 main {
 	margin: 0.5in;
@@ -33,7 +39,9 @@ main {
 }
 
 main p {
-	line-height: 1.40;
+	line-height: 1.35;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
 }
 
 main ul {
