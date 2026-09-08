@@ -1,0 +1,1 @@
+Page breaks in the printed/PDF resume can now be applied to any job or education entry (or bullet), not just before a company heading, via a new `class` property that replaces the old `pageBreak` flag.
