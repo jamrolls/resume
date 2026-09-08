@@ -28,7 +28,7 @@
       "start": "January 2000",
       "end": null,
       "duration": "Optional, but something like '10 years 6 months'",
-      "class": "break1",
+      "class": "pbreak",
       "description": "Optional description of the company or your role in it",
       "bullets": [
         "Accomplishment",
@@ -37,7 +37,7 @@
       ],
       "bulletClasses": [
         null,
-        "break2",
+        "pbreak",
         null
       ]
     }

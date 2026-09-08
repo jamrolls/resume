@@ -112,11 +112,11 @@
 		const h3 = document.createElement('h3');
 		h3.textContent = job.company;
 		if (job['class']) h3.className = job['class'];
-		// pageBreak is deprecated; use class instead
+		// pageBreak is deprecated; use class: 'pbreak' instead
 		else if (job.pageBreak) {
 			console.warn(
 				`${job.company}: pageBreak is deprecated, ` +
-				`use class instead`
+				`use class: 'pbreak' instead`
 			);
 			h3.className = 'pbreak';
 		}
