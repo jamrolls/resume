@@ -1,3 +1,8 @@
+# Branch Policy
+Do not edit files when the current branch does not match dev-*. 
+Create a dev branch first. Issue branches follow the pattern 
+dev-<issue-number> (e.g. dev-3 for issue #3).
+
 # Project Conventions
 - Data should be split from application code
 - Use standard-readme (https://github.com/richardlitt/standard-readme)
@@ -5,8 +10,6 @@
 - Use conventional-commits (https://conventionalcommits.org)
     * Commit types for code: dev, fix, feat, refactor
     * Commit types for non-code: style, chore, release
-- Prompt for confirmation before editing files when the current branch 
-  name does not match 'dev-*'
 
 # Code Style
 - Use tabs for indentation
