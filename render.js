@@ -30,6 +30,7 @@
 
 		renderHeader(d);
 		renderSummary(d.summary);
+		renderAchievements(d.achievements);
 		renderExperience(d.experience);
 		renderEducation(d.education);
 		renderAside(d);
@@ -73,6 +74,38 @@
 		document.querySelectorAll('main > div').forEach(el => {
 			if (el !== div) el.remove();
 		});
+	}
+
+
+	// ---------------------------------------------------------------------------
+	// Key Achievements
+	// ---------------------------------------------------------------------------
+
+	function renderAchievements(achievements) {
+		if (!achievements?.bullets?.length) return;
+
+		const main = document.querySelector('main');
+		const workH2 = [...document.querySelectorAll('main h2')]
+			.find(el => el.textContent.trim() === 'Work Experience');
+
+		// A styled paragraph, not a heading: a real heading tag would read
+		// to ATS parsers as the end of the summary/objective, but the
+		// achievements below are meant to stay part of it.
+		const label = document.createElement('p');
+		label.textContent = 'Key Achievements';
+		label.classList.add('achievements-label');
+		if (achievements['class']) label.classList.add(achievements['class']);
+		main.insertBefore(label, workH2);
+
+		const ul = document.createElement('ul');
+		achievements.bullets.forEach((text, i) => {
+			const li = document.createElement('li');
+			li.textContent = text;
+			if (achievements.bulletClasses?.[i])
+				li.className = achievements.bulletClasses[i];
+			ul.appendChild(li);
+		});
+		main.insertBefore(ul, workH2);
 	}
 
 
