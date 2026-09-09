@@ -95,13 +95,13 @@ h5 + p, h5 + ul, p + ul {
 	margin-top: 0.3em;
 }
 
-.highlights-label {
+.achievements-label {
 	font-family: "Corbel", "Helvetica Neue", sans-serif;
 	font-weight: 400;
 	margin-bottom: 0;
 }
 
-.highlights-label + ul {
+.achievements-label + ul {
 	margin-top: 0.15em;
 }
 

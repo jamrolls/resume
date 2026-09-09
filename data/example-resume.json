@@ -8,11 +8,11 @@
     "Multiple paragraphs are allowed."
   ],
 
-  "highlights": {
+  "achievements": {
     "class": null,
     "bullets": [
       "Optional section rendered under the summary, if present",
-      "Highlighted achievement"
+      "Key achievement"
     ]
   },
 

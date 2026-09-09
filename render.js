@@ -30,7 +30,7 @@
 
 		renderHeader(d);
 		renderSummary(d.summary);
-		renderHighlights(d.highlights);
+		renderAchievements(d.achievements);
 		renderExperience(d.experience);
 		renderEducation(d.education);
 		renderAside(d);
@@ -81,35 +81,28 @@
 	// Key Achievements
 	// ---------------------------------------------------------------------------
 
-	function renderHighlights(highlights) {
+	function renderAchievements(achievements) {
+		if (!achievements?.bullets?.length) return;
+
 		const main = document.querySelector('main');
-
-		// Remove any highlights section left over from a prior render.
-		document.querySelectorAll('[data-section="highlights"]')
-			.forEach(el => el.remove());
-
-		if (!highlights?.bullets?.length) return;
-
 		const workH2 = [...document.querySelectorAll('main h2')]
 			.find(el => el.textContent.trim() === 'Work Experience');
 
 		// A styled paragraph, not a heading: a real heading tag would read
 		// to ATS parsers as the end of the summary/objective, but the
-		// highlights below are meant to stay part of it.
+		// achievements below are meant to stay part of it.
 		const label = document.createElement('p');
 		label.textContent = 'Key Achievements';
-		label.classList.add('highlights-label');
-		if (highlights['class']) label.classList.add(highlights['class']);
-		label.dataset.section = 'highlights';
+		label.classList.add('achievements-label');
+		if (achievements['class']) label.classList.add(achievements['class']);
 		main.insertBefore(label, workH2);
 
 		const ul = document.createElement('ul');
-		ul.dataset.section = 'highlights';
-		highlights.bullets.forEach((text, i) => {
+		achievements.bullets.forEach((text, i) => {
 			const li = document.createElement('li');
 			li.textContent = text;
-			if (highlights.bulletClasses?.[i])
-				li.className = highlights.bulletClasses[i];
+			if (achievements.bulletClasses?.[i])
+				li.className = achievements.bulletClasses[i];
 			ul.appendChild(li);
 		});
 		main.insertBefore(ul, workH2);
