@@ -78,7 +78,7 @@
 
 
 	// ---------------------------------------------------------------------------
-	// Highlighted Achievements
+	// Key Achievements
 	// ---------------------------------------------------------------------------
 
 	function renderHighlights(highlights) {
@@ -93,11 +93,15 @@
 		const workH2 = [...document.querySelectorAll('main h2')]
 			.find(el => el.textContent.trim() === 'Work Experience');
 
-		const h3 = document.createElement('h3');
-		h3.textContent = 'Highlighted Achievements';
-		h3.dataset.section = 'highlights';
-		if (highlights['class']) h3.className = highlights['class'];
-		main.insertBefore(h3, workH2);
+		// A styled paragraph, not a heading: a real heading tag would read
+		// to ATS parsers as the end of the summary/objective, but the
+		// highlights below are meant to stay part of it.
+		const label = document.createElement('p');
+		label.textContent = 'Key Achievements';
+		label.classList.add('highlights-label');
+		if (highlights['class']) label.classList.add(highlights['class']);
+		label.dataset.section = 'highlights';
+		main.insertBefore(label, workH2);
 
 		const ul = document.createElement('ul');
 		ul.dataset.section = 'highlights';

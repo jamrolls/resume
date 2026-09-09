@@ -82,8 +82,7 @@ h4 + h5 ,
 h5 + h6 {
 	margin-top: 0.2em;
 }
-h2 + h3 ,
-p + h3 {
+h2 + h3 {
 	margin-top: 0.4em;
 }
 
@@ -92,8 +91,18 @@ h5 {
 	margin-bottom: 0;
 }
 
-h3 + ul, h5 + p, h5 + ul, p + ul {
+h5 + p, h5 + ul, p + ul {
 	margin-top: 0.3em;
+}
+
+.highlights-label {
+	font-family: "Corbel", "Helvetica Neue", sans-serif;
+	font-weight: 400;
+	margin-bottom: 0;
+}
+
+.highlights-label + ul {
+	margin-top: 0.15em;
 }
 
 p.verbose + ul {
