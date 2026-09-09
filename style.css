@@ -28,6 +28,7 @@ aside::-webkit-scrollbar {
 aside p {
 	font-size: 90%;
 }
+/* Matches default h2+ul spacing so aside paragraphs don't look cramped */
 aside h2 + p {
 	margin-top: 1.2em;
 }
