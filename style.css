@@ -82,7 +82,8 @@ h4 + h5 ,
 h5 + h6 {
 	margin-top: 0.2em;
 }
-h2 + h3 {
+h2 + h3 ,
+p + h3 {
 	margin-top: 0.4em;
 }
 
@@ -91,7 +92,7 @@ h5 {
 	margin-bottom: 0;
 }
 
-h5 + p, h5 + ul, p + ul {
+h3 + ul, h5 + p, h5 + ul, p + ul {
 	margin-top: 0.3em;
 }
 

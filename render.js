@@ -30,6 +30,7 @@
 
 		renderHeader(d);
 		renderSummary(d.summary);
+		renderHighlights(d.highlights);
 		renderExperience(d.experience);
 		renderEducation(d.education);
 		renderAside(d);
@@ -73,6 +74,41 @@
 		document.querySelectorAll('main > div').forEach(el => {
 			if (el !== div) el.remove();
 		});
+	}
+
+
+	// ---------------------------------------------------------------------------
+	// Highlighted Achievements
+	// ---------------------------------------------------------------------------
+
+	function renderHighlights(highlights) {
+		const main = document.querySelector('main');
+
+		// Remove any highlights section left over from a prior render.
+		document.querySelectorAll('[data-section="highlights"]')
+			.forEach(el => el.remove());
+
+		if (!highlights?.bullets?.length) return;
+
+		const workH2 = [...document.querySelectorAll('main h2')]
+			.find(el => el.textContent.trim() === 'Work Experience');
+
+		const h3 = document.createElement('h3');
+		h3.textContent = 'Highlighted Achievements';
+		h3.dataset.section = 'highlights';
+		if (highlights['class']) h3.className = highlights['class'];
+		main.insertBefore(h3, workH2);
+
+		const ul = document.createElement('ul');
+		ul.dataset.section = 'highlights';
+		highlights.bullets.forEach((text, i) => {
+			const li = document.createElement('li');
+			li.textContent = text;
+			if (highlights.bulletClasses?.[i])
+				li.className = highlights.bulletClasses[i];
+			ul.appendChild(li);
+		});
+		main.insertBefore(ul, workH2);
 	}
 
 

@@ -8,6 +8,14 @@
     "Multiple paragraphs are allowed."
   ],
 
+  "highlights": {
+    "class": null,
+    "bullets": [
+      "Optional section rendered under the summary, if present",
+      "Highlighted achievement"
+    ]
+  },
+
   "experience": [
     {
       "company": "Company",
